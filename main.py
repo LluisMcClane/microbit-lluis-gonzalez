@@ -44,6 +44,7 @@ def numElements():
             bsclicked += 1
         basic.pause(50)
     basic.clear_screen()
+    music.play_melody("", 120)
     basic.show_string("Harmonic --> ")
     user_interact(astimes)
 def showIcon():

@@ -48,6 +48,7 @@ function numElements() {
         basic.pause(50)
     }
     basic.clearScreen()
+    music.playMelody("", 120)
     basic.showString("Harmonic --> ")
     user_interact(astimes)
 }
