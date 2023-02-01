@@ -8,6 +8,7 @@ def user_interact(interval: number):
 
     #global variable
     global base_number
+
     #clearing screen
     basic.clear_screen()
     base_number = 1
@@ -24,20 +25,26 @@ def harmonic_series(n):
         sum += 1/i
     return sum
 
+#this function manages when the user_interact and harmonic functions are called
 def numElements():
+    #global variables
     global astimes, bsclicked
+
     while bsclicked < 1:
+        #if A button is pressed showing A and clearing screen and staying in loop so the user can input more numbers
         if input.button_is_pressed(Button.A):
             basic.show_string("A")
             basic.clear_screen()
             astimes += 1
             basic.show_string("" + str(astimes))
+
+            #if user inputs B gets out of the loop
         elif input.button_is_pressed(Button.B):
             basic.show_string("B")
             bsclicked += 1
         basic.pause(50)
     basic.clear_screen()
-    basic.show_string("Fibo")
+    basic.show_string("Harmonic --> ")
     user_interact(astimes)
 def showIcon():
     basic.clear_screen()
@@ -49,7 +56,7 @@ def showIcon():
         basic.show_icon(IconNames.DIAMOND)
         basic.pause(100)
     basic.clear_screen()
-    basic.show_string("Fibo")
+    basic.show_string("Harmonic")
     basic.clear_screen()
 
 def on_forever():
@@ -58,7 +65,7 @@ def on_forever():
     atimes = 0
     bclicked = 0
     showIcon()
-    basic.show_string("A to input B to fibo")
+    basic.show_string("Input = A | B = finish")
     numElements()
     basic.pause(500)
 

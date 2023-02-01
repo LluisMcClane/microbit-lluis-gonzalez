@@ -28,15 +28,19 @@ function harmonic_series(n: number): number {
     return sum
 }
 
+// this function manages when the user_interact and harmonic functions are called
 function numElements() {
+    // global variables
     
     while (bsclicked < 1) {
+        // if A button is pressed showing A and clearing screen and staying in loop so the user can input more numbers
         if (input.buttonIsPressed(Button.A)) {
             basic.showString("A")
             basic.clearScreen()
             astimes += 1
             basic.showString("" + ("" + astimes))
         } else if (input.buttonIsPressed(Button.B)) {
+            // if user inputs B gets out of the loop
             basic.showString("B")
             bsclicked += 1
         }
@@ -44,7 +48,7 @@ function numElements() {
         basic.pause(50)
     }
     basic.clearScreen()
-    basic.showString("Fibo")
+    basic.showString("Harmonic --> ")
     user_interact(astimes)
 }
 
@@ -58,7 +62,7 @@ function showIcon() {
         basic.pause(100)
     }
     basic.clearScreen()
-    basic.showString("Fibo")
+    basic.showString("Harmonic")
     basic.clearScreen()
 }
 
@@ -68,7 +72,7 @@ basic.forever(function on_forever() {
     let atimes = 0
     let bclicked = 0
     showIcon()
-    basic.showString("A to input B to fibo")
+    basic.showString("Input = A | B = finish")
     numElements()
     basic.pause(500)
 })
