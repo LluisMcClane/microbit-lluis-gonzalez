@@ -72,7 +72,7 @@ basic.forever(function on_forever() {
     let atimes = 0
     let bclicked = 0
     showIcon()
-    basic.showString("Input = A | B = finish")
+    basic.showString("A = input | B = finish")
     numElements()
     basic.pause(500)
 })

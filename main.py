@@ -65,7 +65,7 @@ def on_forever():
     atimes = 0
     bclicked = 0
     showIcon()
-    basic.show_string("Input = A | B = finish")
+    basic.show_string("A = input | B = finish")
     numElements()
     basic.pause(500)
 
